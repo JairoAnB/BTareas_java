@@ -1,0 +1,90 @@
+:root {
+    --rosado: rgb(255, 184, 196);
+    --verde: rgb(0, 115, 23);
+    --azul: rgb(0, 43, 249);
+    --rojo: rgb(255, 0, 8);
+    --morado: rgb(117, 19, 114);
+    --gris: rgb(117, 117, 117);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0;
+}
+.rosado{
+    background-color: var(--rosado);
+}
+.verde{
+    background-color: var(--verde);
+}
+.azul{
+    background-color: var(--azul);
+}
+.rojo{
+    background-color: var(--rojo);
+}
+.morado{
+    background-color: var(--morado);
+}
+.gris{
+    background-color: var(--gris);
+}
+
+/* pantalla menor a 500px*/
+@media(max-width: 500px){
+    .rosado, .verde{
+        height: 25%;
+    }
+    .azul{
+        height: 10%;
+    }
+    .gris{
+        height: 40%;
+    }
+    .rojo,.morado{
+        display: none;
+    }
+}
+/* pantalla mayor a 501px y menor a 750px */
+@media(min-width: 501px) and (max-width: 750px){
+    .rosado{
+        height: 25%;
+    }
+    .verde,.azul,.rojo{
+        display: inline-block;
+        height: 25%;
+        width: 33%;
+        margin: 0.1%;
+    }
+    .morado,.gris{
+        display: inline-block;
+        height: 50%;
+        margin: 0% 0.1%;
+    }
+    .morado{
+        width: 60%;
+    }
+    .gris{
+        width: 39.5%;
+    }
+}
+@media(min-width: 751px){
+    .rosado{
+        height: 5%;
+    }
+    .verde{
+        height: 25.10%;
+    }
+    .azul{
+        height: 40%;
+    }
+    .rojo,.morado,.gris{
+        display: inline-block;
+        height: 29%;
+        width: 33.3%;
+    }
+}

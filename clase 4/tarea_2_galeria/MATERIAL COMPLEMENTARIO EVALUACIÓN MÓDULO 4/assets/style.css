@@ -1,0 +1,221 @@
+/*
+ ACÁ DEBE IR EL CÓDIGO NECESARIO PARA CUMPLIR LOS REQUERIMIENTOS
+
+/*
+
+    Pantalla Extra Large (>=1200px) 
+
+*/
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+@media (min-width: 1200px) {
+  .gallery {
+    display: flex;
+  }
+  .gallery-item-gato,
+  .gallery-item-gato2,
+  .gallery-item-perro {
+    flex: 1;
+    margin-right: 50px;
+  }
+  .gallery-item-perro {
+    margin-right: 0;
+  }
+}
+
+/* 
+
+    Pantalla Large (>=992px) 
+
+*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-item-gato,
+  .gallery-item-gato2,
+  .gallery-item-perro {
+    flex: 1 0 33.33%;
+    max-width: 33.33%;
+  }
+  /* 
+
+   Pantalla Medium (>=768px) 
+
+*/
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .col-md-12 {
+      width: 100%;
+    }
+
+    .col-md-11 {
+      width: 91.66666667%;
+    }
+
+    .col-md-10 {
+      width: 83.33333334%;
+    }
+
+    .col-md-9 {
+      width: 75%;
+    }
+
+    .col-md-8 {
+      width: 66.66666667%;
+    }
+
+    .col-md-7 {
+      width: 58.33333334%;
+    }
+
+    .col-md-6 {
+      width: 50%;
+    }
+
+    .col-md-5 {
+      width: 41.66666667%;
+    }
+
+    .col-md-4 {
+      width: 33.33333334%;
+    }
+
+    .col-md-3 {
+      width: 25%;
+    }
+
+    .col-md-2 {
+      width: 16.66666667%;
+    }
+
+    .col-md-1 {
+      width: 8.33333333%;
+    }
+  }
+
+  /* 
+
+    Pantalla LSmall (>=576px) 
+
+*/
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    .col-sm-12 {
+      width: 100%;
+    }
+
+    .col-sm-11 {
+      width: 91.66666667%;
+    }
+
+    .col-sm-10 {
+      width: 83.33333334%;
+    }
+
+    .col-sm-9 {
+      width: 75%;
+    }
+
+    .col-sm-8 {
+      width: 66.66666667%;
+    }
+
+    .col-sm-7 {
+      width: 58.33333334%;
+    }
+
+    .col-sm-6 {
+      width: 50%;
+    }
+
+    .col-sm-5 {
+      width: 41.66666667%;
+    }
+
+    .col-sm-4 {
+      width: 33.33333334%;
+    }
+
+    .col-sm-3 {
+      width: 25%;
+    }
+
+    .col-sm-2 {
+      width: 16.66666667%;
+    }
+
+    .col-sm-1 {
+      width: 8.33333333%;
+    }
+  }
+
+  /* 
+
+    Pantalla Extra small (<576px) 
+
+*/
+
+  @media (max-width: 575px) {
+    .col-xs-12 {
+      width: 100%;
+    }
+
+    .col-xs-11 {
+      width: 91.66666667%;
+    }
+
+    .col-xs-10 {
+      width: 83.33333334%;
+    }
+
+    .col-xs-9 {
+      width: 75%;
+    }
+
+    .col-xs-8 {
+      width: 66.66666667%;
+    }
+
+    .col-xs-7 {
+      width: 58.33333334%;
+    }
+
+    .col-xs-6 {
+      width: 50%;
+    }
+
+    .col-xs-5 {
+      width: 41.66666667%;
+    }
+
+    .col-xs-4 {
+      width: 33.33333334%;
+    }
+
+    .col-xs-3 {
+      width: 25%;
+    }
+
+    .col-xs-2 {
+      width: 16.66666667%;
+    }
+
+    .col-xs-1 {
+      width: 8.33333333%;
+    }
+    .gallery-item-gato,
+    .gallery-item-gato2,
+    .gallery-item-perro {
+      margin-top: 50px;
+    }
+  }
+}
