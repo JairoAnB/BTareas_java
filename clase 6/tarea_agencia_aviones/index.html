@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AeroviaEXPRESS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
+        <div class="container-fluid" id="barra">
+          <a class="navbar-brand text-white fs-5" id="aero" href="#">AeroVia Express</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ofertas y destinos
+                  </a>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Mis viajes
+                  </a>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Centro de ayuda</a>
+              </li>
+            </div>
+            <div class="iniciarS">
+            <button class="btn bg-light opacity-50 p-lg-1 rounded-pill fs-6">Iniciar Sesión</button>
+        </div>
+        </div>
+      </nav>
+  </header>
+  <body>
+    <div class="promocion">
+        <div class="m-4" id="text-img">
+        <h1>¡Vacaciones de verano!</h1>
+        <p class="fw-bold">Vuela por Chile y Sudamérica con hasta 40% de descuento</p>
+        <p>Encuentra paquetes, hoteles, seguros y arriendo de autos en AeroVia Express</p>
+        <br>
+        <a href="#" class="none">Compra aquí</a>
+    </div>
+    </div>
+    <span>
+        <img class="imgpromo" src="img/polynesia.jpg" width="465" alt="promo">
+    </span>
+    <form class="fw-bold">
+    <div class="formulario container">
+        <div class="btn-group mt-3 mb-1 ms-2" role="group" aria-label="Basic example">
+            <button type="button" id="color" class="btn btn-outline-dark">Vuelos</button>
+            <button type="button" id="color" class="btn btn-outline-dark">Paquetes</button>
+            <button type="button" id="color" class="btn btn-outline-dark">Hoteles</button>
+            <button type="button" id="color" class="btn btn-outline-dark">Autos</button>
+            <button type="button" id="color" class="btn btn-outline-dark">Seguros</button>
+            <button type="button" id="color" class="btn btn-outline-dark">Upgrate</button>
+        </div>
+        <div class="d-flex mt-4 mb-4 ms-3">
+        <a class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle none me-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ida y Vuelta
+            </a>
+        <a class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Economy
+            </a>
+         <a class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            1 pasajero
+            </a>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-auto">
+                <input class="form-control"  type="text" placeholder="Origen">
+              </div>
+              <div class="col-auto">
+                <input class="form-control" type="text" placeholder="Destino">
+              </div>
+              <div id="tamaño">
+                <input class="form-control" type="text" placeholder="Fecha Ida" disabled>
+              </div>
+              <div id="tamaño">
+                <input class="form-control" type="date">
+              </div>
+              <div id="tamaño">
+                <input class="form-control" type="text" placeholder="Fecha Vuelta" disabled>
+              </div>
+              <div id="tamaño">
+                <input class="form-control" type="date" disabled>
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-danger mb-4">Buscar</button>
+              </div>
+            </div>
+          </div>
+    </form>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

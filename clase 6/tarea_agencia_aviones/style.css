@@ -1,0 +1,58 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: auto;
+  padding: auto;
+}
+#aero {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#barra {
+  background-color: #051b54;
+  margin: button;
+  padding: auto;
+}
+
+.navbar-brand,
+.nav-link {
+  line-height: 1;
+}
+#nav {
+  padding: 0%;
+}
+.iniciarS {
+  padding: 0px;
+  margin: 5px 0px;
+  border-radius: 10%;
+}
+.promocion {
+  background-color: #62dad3;
+  padding: 2%;
+  margin: 1% 16.7%;
+  border-radius: 1.2%;
+}
+.imgpromo {
+  position: absolute;
+  top: 63px;
+  left: 59%;
+  border-radius: 2%;
+}
+.none {
+  text-decoration: none;
+}
+.formulario {
+  color: #051b54;
+  background-color: white;
+  box-shadow: 0.1px 1px 10px #bebebe;
+  width: 65%;
+  border-radius: 10px;
+}
+
+.col-auto {
+  width: 120px;
+}
+#tamaño {
+  width: 200px;
+}
+#color {
+  color: #051b54;
+}
