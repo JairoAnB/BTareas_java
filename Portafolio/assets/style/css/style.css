@@ -1,0 +1,158 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  margin: auto;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+#main-container {
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+#redes {
+  width: 16%;
+  cursor: pointer;
+}
+#card {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 0% 2%;
+}
+.inicio {
+  background: rgb(254, 254, 157);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 254, 157, 1) 24%,
+    rgba(255, 255, 223, 1) 44%,
+    rgba(249, 249, 122, 1) 97%
+  );
+  padding: 1%;
+}
+
+#contacto {
+  margin: 0% 15%;
+  border-radius: 20px;
+}
+#tarjeta {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+#tarjeta:hover {
+  box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-container {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.carrusel-container img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#contacto label {
+  font-weight: bold;
+}
+
+#contacto input,
+#contacto textarea,
+#contacto select {
+  margin-bottom: 15px;
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+}
+.circular {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+#contacto {
+  margin: 0 auto;
+  border-radius: 20px;
+  max-width: 100%;
+  padding: 20px;
+}
+#alerta {
+  display: none;
+}
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s;
+}
+.btn-social:hover {
+  background-color: #e9ecef;
+  transform: scale(1.1);
+}
+.btn-social:hover .social-icon {
+  filter: brightness(0.7);
+}
+@media (max-width: 576px) {
+  #contacto {
+    width: 90%;
+  }
+  #redes {
+    width: 30%;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  #contacto {
+    width: 90%;
+  }
+  #redes {
+    width: 20%;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  #contacto {
+    width: 50%;
+  }
+  #redes {
+    width: 16%;
+  }
+}
+@media (min-width: 993px) {
+  #contacto {
+    width: 25%;
+  }
+  #redes {
+    width: 14%;
+  }
+}
