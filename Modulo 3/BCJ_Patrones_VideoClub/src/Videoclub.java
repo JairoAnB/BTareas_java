@@ -93,7 +93,7 @@ public class Videoclub {
     private void pago() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("¿Con que medio de pago desea pagar?");
+        System.out.println("¿Con que medio de pago desea pagar? (Efectivo o Tarjeta)");
         String opcionPago = sc.nextLine();
 
         if (opcionPago.equalsIgnoreCase("efectivo")) {
