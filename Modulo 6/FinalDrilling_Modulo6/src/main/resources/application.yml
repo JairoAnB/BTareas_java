@@ -1,0 +1,5 @@
+spring:
+  security:
+    jwt:
+      secret: 123
+      expiration: 86400

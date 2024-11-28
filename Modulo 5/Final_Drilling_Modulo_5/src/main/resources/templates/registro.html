@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Horóscopo Chino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4f1e1;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            max-width: 420px;
+        }
+        .card-header {
+            background-color: #197278;
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+        }
+        .form-control {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 1rem;
+        }
+        .form-control:focus {
+            border-color: #197278;
+            box-shadow: 0 0 5px rgba(25, 114, 120, 0.8);
+        }
+        .btn-register {
+            background-color: #C44536;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 50px;
+        }
+        .btn-register:hover {
+            background-color: #772E25;
+        }
+        .form-label {
+            font-size: 1.1rem;
+            color: #283D3B;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="card shadow-lg">
+                <div class="card-header py-3">
+                    <h2 class="card-title text-center mb-0 fw-bold">Registro Horóscopo Chino 🐉</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form action="registro/registerUsuario" method="post">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="contrasena" placeholder="Crea tu contraseña" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="fecha-nacimiento" name="fechaNacimiento" required>
+                        </div>
+                        <div th:if="${usuarioEncontrado}" class="alert alert-danger mt-3 text-center" role="alert">
+                            ¡El correo ya se encuentra registrado!.
+                        </div>
+                        <div th:if="${usuarioCreado}" class="alert alert-success mt-3" role="alert">
+                            ¡El usuario se ha creado correctamente!.
+                        </div>
+                        <button type="submit" class="btn btn-register w-100 py-2 mt-0 rounded-pill fw-bold">Registrarse</button>
+                            <p class="text-muted mb-0 mt-2">Regístrate para descubrir tu signo del horóscopo chino y recibir predicciones personalizadas.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB9+Y/M0OaFdST6QasABD9PfEH+0XMxyj2PIRShGOfGm7Gn2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe4d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Horóscopo Chino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4f1e1;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            max-width: 420px;
+        }
+        .card-header {
+            background-color: #197278;
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+        }
+        .form-control {
+            border: 2px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: #197278;
+            box-shadow: 0 0 5px rgba(25, 114, 120, 0.8);
+        }
+        .btn-login {
+            background-color: #C44536;
+            border: none;
+        }
+        .btn-login:hover {
+            background-color: #772E25;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="card shadow-lg">
+                <div class="card-header py-3">
+                    <h2 class="card-title text-center mb-0 fw-bold">Horóscopo Chino</h2>
+                </div>
+                <div th:if="${UsuarioEliminado}" class="alert alert-success">
+                    ¡Cuenta eliminada correctamente!
+                </div>
+                <div class="card-body p-4">
+                    <form th:action="@{/login/iniciarSesion}" method="post">
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo" >
+                            <div th:if="${ErrorCorreoEmpty}" style="color: red">
+                                <p th:text="${ErrorCorreoEmpty}"></p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="contrasena" placeholder="Introduce tu contraseña" >
+                        <div th:if="${ErrorPasswordEmpty}" style="color: red">
+                            <p th:text="${ErrorPasswordEmpty}"></p>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-login w-100 py-2 mt-3 rounded-pill fw-bold">Entrar</button>
+                        <div th:if="${passwordInvalida}" class="alert alert-danger mt-3" role="alert">
+                            Contraseña o correo invalidos.
+                        </div>
+
+                    </form>
+                    <div class="text-center mt-2">
+                        <a href="/registro">¡Si no tienes cuenta registrate!</a>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-0 text-center py-3">
+                    <p class="text-muted mb-0">Inicia sesión para conocer tu horóscopo chino.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB9+Y/M0OaFdST6QasABD9PfEH+0XMxyj2PIRShGOfGm7Gn2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe4d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

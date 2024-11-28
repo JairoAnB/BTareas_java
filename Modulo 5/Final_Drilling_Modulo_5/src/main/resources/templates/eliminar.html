@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Cuenta - Horóscopo Chino</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f4f1e1;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+    }
+    .navbar {
+      background-color: #197278;
+    }
+    .btn-logout {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn-logout:hover {
+      background-color: #C44536;
+      border-color: #C44536;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+    .card-header {
+      background-color: #C44536;
+      color: #fff;
+      border-radius: 15px 15px 0 0;
+    }
+    .btn-delete {
+      background-color: #C44536;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+    }
+    .btn-delete:hover {
+      background-color: #772E25;
+    }
+    .form-label {
+      font-size: 1.1rem;
+      color: #283D3B;
+    }
+  </style>
+</head>
+<body>
+<div th:if="${ErrorPassword}" class="alert alert-danger">
+  ¡Error en la contraseña! Por favor intentalo nuevamente
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fs-3 fw-bold" href="#">Horóscopo Chino</a>
+    <form action="/eliminar/desloguear" method="post">
+      <button class="btn btn-logout">Cerrar Sesión</button>
+    </form>
+  </div>
+</nav>
+<main class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card">
+        <div class="card-header py-3">
+          <h2 class="card-title text-center mb-0 fw-bold">Eliminar Cuenta</h2>
+        </div>
+        <div class="card-body p-4">
+          <p class="text-center text-muted">
+            ¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.
+          </p>
+          <form action="eliminar/confirmar"  method="post">
+            <div class="mb-3">
+              <label for="password" class="form-label">Confirma tu Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Escribe tu contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-delete w-100 py-2 mt-3 rounded-pill fw-bold">Eliminar Cuenta</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB9+Y/M0OaFdST6QasABD9PfEH+0XMxyj2PIRShGOfGm7Gn2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe4d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
